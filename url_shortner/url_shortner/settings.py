@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'link_services.app.LinkServicesConfig',
+    'link_services',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +76,14 @@ WSGI_APPLICATION = 'url_shortner.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'url_shortner',
+        'USER': 'mamp',
+        'PASSWORD': '41684168',
+        'HOST': '127.0.0.1',
+        'PORT': '8889',
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
