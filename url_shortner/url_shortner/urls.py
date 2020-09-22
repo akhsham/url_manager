@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+# from url_shortner.link_services.views import CreateUrl
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('', CreateUrl.as_view(), name="HOME"),
+
     path('', include('link_services.urls')),
 ]

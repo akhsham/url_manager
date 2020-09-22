@@ -1,6 +1,13 @@
+# from django.urls import path
+# from . import views
+#
+# urlpatterns = [
+#     path('', views.post_list, name='post_list'),
+# ]
+
 from django.urls import path
-from . import views
+from .views import CreateUrl
 
 urlpatterns = [
-    path('', views.post_list, name='post_list'),
+    path('', CreateUrl.as_view(), name="HOME"),
 ]
